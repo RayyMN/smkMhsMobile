@@ -127,7 +127,8 @@ const Home = ({navigation}) => {
         {/* input jumlah */}
 
         {/* konfirmasi */}
-        <TouchableOpacity
+        <TouchableOpacity 
+        onPress={() => navigation.navigate('succes')}
           style={{
             display: 'flex',
             justifyContent: 'center',

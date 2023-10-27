@@ -1,12 +1,18 @@
-import {View, Text, ScrollView, Image, TouchableOpacity, StyleSheet} from 'react-native';
+import {
+  View,
+  Text,
+  ScrollView,
+  Image,
+  TouchableOpacity,
+  StyleSheet,
+} from 'react-native';
 import React from 'react';
 
-const Home = ({navigation }) => {
+const Home = ({navigation}) => {
   return (
     <View>
       {/* navbar */}
-      <View
-        style={style.navbar}>
+      <View style={style.navbar}>
         <TouchableOpacity>
           <Image
             style={style.logo}
@@ -19,45 +25,60 @@ const Home = ({navigation }) => {
         <TouchableOpacity>
           <Image
             style={style.hamburger}
-              source={require('../assets/icons/menu.png')}
+            source={require('../assets/icons/menu.png')}
           />
         </TouchableOpacity>
       </View>
       {/* navbar */}
 
-
       {/* Kata Sambutan */}
-        <View style={style.sambutan}>
-          <Text style={{
+      <View style={style.sambutan}>
+        <Text
+          style={{
             fontSize: 16,
-            color:'black',
-            opacity: 0.5
-          }}>Selamat datang di</Text>
-          <Text style={{
+            color: 'black',
+            opacity: 0.5,
+          }}>
+          Selamat datang di
+        </Text>
+        <Text
+          style={{
             fontSize: 35,
             color: 'black',
             fontWeight: 'bold',
-            letterSpacing: 1
-          }}>Kantin MultiStudi</Text>
-        </View>
+            letterSpacing: 1,
+          }}>
+          Kantin MultiStudi
+        </Text>
+      </View>
       {/* Kata Sambutan */}
 
-
       {/* menu makanan */}
-      <Text style={{
-        fontSize: 16,
-        marginLeft: 16,
-        marginTop: 16,
-        color: 'black'
-      }}>Menu Makanan</Text>
+      <Text
+        style={{
+          fontSize: 16,
+          marginLeft: 16,
+          marginTop: 16,
+          color: 'black',
+        }}>
+        Menu Makanan
+      </Text>
       <View style={style.menuMakanan}>
         <TouchableOpacity onPress={() => navigation.navigate('Detail')}>
-          <Image style={style.makanan} resizeMode='cover' source={require('../assets/images/nasi-goreng-pedas_43.jpeg')}/>
+          <Image
+            style={style.makanan}
+            resizeMode="cover"
+            source={require('../assets/images/nasi-goreng-pedas_43.jpeg')}
+          />
           <Text style={style.namaMenu}>Nasi Goreng</Text>
           <Text style={style.hargaMenu}>Rp 20.000</Text>
         </TouchableOpacity>
-        <TouchableOpacity>
-          <Image style={style.makanan} resizeMode='cover' source={require('../assets/images/burger.png')}/>
+        <TouchableOpacity onPress={() => navigation.navigate('Detail')}>
+          <Image
+            style={style.makanan}
+            resizeMode="cover"
+            source={require('../assets/images/burger.png')}
+          />
           <Text style={style.namaMenu}>Burger</Text>
           <Text style={style.hargaMenu}>Rp 30.000</Text>
         </TouchableOpacity>
@@ -65,20 +86,31 @@ const Home = ({navigation }) => {
       {/* menu makanan */}
 
       {/* menu minuman */}
-      <Text style={{
-        fontSize: 16,
-        marginLeft: 16,
-        marginTop: 23,
-        color: 'black'
-      }}>Menu Minuman</Text>
+      <Text
+        style={{
+          fontSize: 16,
+          marginLeft: 16,
+          marginTop: 23,
+          color: 'black',
+        }}>
+        Menu Minuman
+      </Text>
       <View style={style.menuMinuman}>
-        <TouchableOpacity>
-          <Image style={style.minuman} resizeMode='cover' source={require('../assets/images/jus.png')}/>
+        <TouchableOpacity onPress={() => navigation.navigate('Detail')}>
+          <Image
+            style={style.minuman}
+            resizeMode="cover"
+            source={require('../assets/images/jus.png')}
+          />
           <Text style={style.namaMenu}>Jus Jeruk</Text>
           <Text style={style.hargaMenu}>Rp 15.000</Text>
         </TouchableOpacity>
-        <TouchableOpacity>
-          <Image style={style.minuman} resizeMode='cover' source={require('../assets/images/teh.png')}/>
+        <TouchableOpacity onPress={() => navigation.navigate('Detail')}>
+          <Image
+            style={style.minuman}
+            resizeMode="cover"
+            source={require('../assets/images/teh.png')}
+          />
           <Text style={style.namaMenu}>Es teh</Text>
           <Text style={style.hargaMenu}>Rp 10.000</Text>
         </TouchableOpacity>
@@ -86,9 +118,9 @@ const Home = ({navigation }) => {
       {/* menu minuman */}
 
       {/* footer by ray */}
-        <Text style={style.footer}>Create By Ray Desain</Text>
+      <Text style={style.footer}>Create By Ray Desain</Text>
       {/* footer by ray */}
-    </View> 
+    </View>
   );
 };
 
@@ -112,31 +144,29 @@ const style = StyleSheet.create({
   },
   hamburger: {
     width: 25,
-    height:25
+    height: 25,
   },
-
-
 
   // sambutan
   sambutan: {
     paddingTop: 32,
     paddingLeft: 16,
   },
-  
-  // menu makanan 
+
+  // menu makanan
   menuMakanan: {
     flexDirection: 'row',
     marginHorizontal: 16,
     width: 'auto',
-    height:210,
-    justifyContent: 'space-between'
+    height: 210,
+    justifyContent: 'space-between',
   },
 
   makanan: {
-    flex:1 ,
+    flex: 1,
     borderRadius: 8,
     width: 190,
-    height: 160
+    height: 160,
   },
 
   // menu minuman
@@ -144,36 +174,35 @@ const style = StyleSheet.create({
     flexDirection: 'row',
     marginHorizontal: 16,
     width: 'full',
-    height:210,
-    justifyContent: 'space-between'
+    height: 210,
+    justifyContent: 'space-between',
   },
 
   minuman: {
     flex: 1,
     borderRadius: 8,
     width: 190,
-    height: 160
+    height: 160,
   },
 
-  // menu coloring 
+  // menu coloring
   namaMenu: {
     paddingTop: 5,
     color: 'black',
-    fontWeight: 'bold'
+    fontWeight: 'bold',
   },
 
   hargaMenu: {
-    color: 'red'
+    color: 'red',
   },
 
-  // footer 
+  // footer
   footer: {
     marginTop: 90,
     textAlign: 'center',
     color: 'black',
-    opacity: 0.6
-  }
-})
-
+    opacity: 0.6,
+  },
+});
 
 export default Home;
