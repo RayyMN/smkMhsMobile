@@ -17,7 +17,7 @@ const succes = () => {
         <Text>Pesanan Berhasil</Text>
         <Text>Pesanan Anda telah diterima dan akan segera diproses. Mohon ditunggu ya</Text>
         <TouchableOpacity>
-            <Text>Kembali Ke Menu Utama</Text>
+            <Text>Kembali Ke Menu utama</Text>
         </TouchableOpacity>
     </View>
   )
