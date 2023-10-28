@@ -31,7 +31,7 @@ const succes = ({navigation}) => {
           color: '#C68484',
           textAlign: 'center',
         }}>
-        Pesanan Anda telah diterima dan akan segera diproses. Mohon ditunggu ya
+        Pesanan Anda telah diterima dan akan segera diproses. Mohon ditunggu Ya
       </Text>
       <TouchableOpacity
         onPress={() => navigation.navigate('Home')}
