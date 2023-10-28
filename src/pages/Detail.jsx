@@ -60,6 +60,7 @@ const Home = ({navigation}) => {
           alignSelf: 'center',
           marginTop: 20,
           width: 380,
+          paddingHorizontal: 16
         }}>
         <Image
           style={{

@@ -165,7 +165,7 @@ const style = StyleSheet.create({
   makanan: {
     flex: 1,
     borderRadius: 8,
-    width: 190,
+    width: 170,
     height: 160,
   },
 
@@ -181,7 +181,7 @@ const style = StyleSheet.create({
   minuman: {
     flex: 1,
     borderRadius: 8,
-    width: 190,
+    width: 170,
     height: 160,
   },
 
